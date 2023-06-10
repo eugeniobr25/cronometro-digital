@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,25 @@
     <!-- Atributo defer faz com que o script seja carregado apos todos os elementos do html sejam carregados -->
     <script src="./js/scripts.js" defer></script>
 </head>
+
 <body>
-    <h1>cronometro-digital</h1>
+    <div class="container">
+        <h1>Cronômetro.js</h1>
+        <div class="timer">
+            <div class="time" id="minutes">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="seconds">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="milliseconds">000</div>
+        </div>
+        <div class="buttons">
+            <button class="btn" id="startBtn">Iniciar</button>
+            <button class="btn" id="pauseBtn">Pausar</button>
+            <button class="btn" id="resumeBtn">Continuar</button>
+            <button class="btn" id="resetBtn">Zerar</button>
+        </div>
+    </div>
     
 </body>
+
 </html>
