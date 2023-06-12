@@ -4,7 +4,7 @@ const millisecondsEl = document.querySelector("#milliseconds")
 const startBtn = document.querySelector("#startBtn")
 const pauseBtn = document.querySelector("#pauseBtn")
 const resumeBtn = document.querySelector("#resumeBtn")
-const resetBtn = document.querySelector("#resetBtn")
+const resetBtn = document.querySelector("#resetBtn");
 
 let interval;
 let minutes = 0;
@@ -69,6 +69,11 @@ function resetTimer() {
     startBtn.style.display = "block";
     pauseBtn.style.display = "none";
     resumeBtn.style.display = "none";
+
+    // Quando eu clicava em iniciar -> pause -> reset Criava um bug:
+    // O cronometro so funcionaria dnv se eu clicasse em iniciar -> pause -> continuar.
+    // Ajeitei colocando o isPaused = false
+    isPaused = false;
 }
 
 function formatTime(time) {
