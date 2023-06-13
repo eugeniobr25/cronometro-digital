@@ -69,11 +69,6 @@ function resetTimer() {
     startBtn.style.display = "block";
     pauseBtn.style.display = "none";
     resumeBtn.style.display = "none";
-
-    // Quando eu clicava em iniciar -> pause -> reset Criava um bug:
-    // O cronometro so funcionaria dnv se eu clicasse em iniciar -> pause -> continuar.
-    // Ajeitei colocando o isPaused = false
-    isPaused = false;
 }
 
 function formatTime(time) {
